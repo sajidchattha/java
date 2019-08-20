@@ -69,7 +69,8 @@ public class DataProcessing {
 	     
 	    public static void main(String[] args)
 	    {
-	        modifyFile("testFile.txt", "[^a-zA-Z0-9\\s]", "");
+	        //removing all special characters
+	    	modifyFile("/path/to/testFile.txt", "[^a-zA-Z0-9\\s]", "");
 	         
 	        System.out.println("done");
 	    }
