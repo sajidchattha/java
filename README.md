@@ -1,1 +1,1 @@
-This is a simple for pattern matches using java.
+This is a simple example for pattern matches using java.
