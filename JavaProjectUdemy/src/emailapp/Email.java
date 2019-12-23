@@ -17,18 +17,35 @@ public class Email {
 		
 		// We need constructor to recieve first and last name
 		
-		public Email (String firstname, String lastname) {
+		public Email () {
 			
 			//this.<class_variable> = local_variable
+			
+			Scanner sc = new Scanner(System.in);
+			System.out.println("Enter the first name: ");
+			firstname = sc.nextLine();
+			System.out.println("Enter the last name: ");
+			lastname = sc.nextLine();
 			this.firstname = firstname;
 			this.lastname = lastname;
-	        System.out.println(this.firstname + " "+this.lastname);
+			
+	        
 	        
 	        this.department = setDepartment();
+	        
+	        System.out.println("\n:::::::Details:::::::\n"); 
+	        
+	        System.out.println(this.firstname + " "+this.lastname);
 	        System.out.println("Department is: " + this.department);
         
+	        
+	         
+	        
 	        this.email = setEmail();
 	        System.out.println("Email address: " + this.email);
+	        
+	        this.password = randomPassword(8);
+	        System.out.println("YOu password: " + this.password);
         
         //Call a method to ask for a department and return the department
 		}
@@ -54,6 +71,20 @@ public class Email {
         	String emailaddr = firstname.toLowerCase() + "." + lastname.toLowerCase() +"@gmail.com";
         	return emailaddr;
        }
+         
+        public String randomPassword (int length) {
+        	
+        	String passwordSet ="ABCDEFGHIJKLMNOUPQRSTUVXYZ123456789!§$%67890ß´+";
+        	char [] password = new char [length];
+        	
+        	for (int i=1; i<length; i++) {
+        		
+        		int rand = (int) (Math.random()*passwordSet.length());
+        		password [i] = passwordSet.charAt(rand);
+        		
+        	}
+        	return new String (password);
+        }
         
 		//Ask for department
 		
