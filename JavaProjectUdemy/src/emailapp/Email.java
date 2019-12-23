@@ -13,6 +13,7 @@ public class Email {
 		private int mailboxCapacity;
 		private String email;
 		private String alternateEmail;
+		private int defaultPasswordlength = 12;
 		
 		
 		// We need constructor to recieve first and last name
@@ -44,7 +45,7 @@ public class Email {
 	        this.email = setEmail();
 	        System.out.println("Email address: " + this.email);
 	        
-	        this.password = randomPassword(8);
+	        this.password = randomPassword(defaultPasswordlength);
 	        System.out.println("YOu password: " + this.password);
         
         //Call a method to ask for a department and return the department
