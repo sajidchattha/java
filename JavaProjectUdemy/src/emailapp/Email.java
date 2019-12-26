@@ -10,10 +10,11 @@ public class Email {
 		private String lastname;
 		private String password;
 		private String department;
-		private int mailboxCapacity;
+		private int mailboxCapacity = 500;
 		private String email;
 		private String alternateEmail;
 		private int defaultPasswordlength = 12;
+		static boolean blank;
 		
 		
 		// We need constructor to recieve first and last name
@@ -37,7 +38,7 @@ public class Email {
 	        System.out.println("\n:::::::Details:::::::\n"); 
 	        
 	        System.out.println(this.firstname + " "+this.lastname);
-	        System.out.println("Department is: " + this.department);
+	        System.out.println("Department : " + this.department);
         
 	        
 	         
@@ -45,8 +46,8 @@ public class Email {
 	        this.email = setEmail();
 	        System.out.println("Email address: " + this.email);
 	        
-	        this.password = randomPassword(defaultPasswordlength);
-	        System.out.println("YOu password: " + this.password);
+	        this.setPassword(randomPassword(defaultPasswordlength));
+	        System.out.println("YOu password: " + this.getPassword());
         
         //Call a method to ask for a department and return the department
 		}
@@ -72,7 +73,9 @@ public class Email {
         	String emailaddr = firstname.toLowerCase() + "." + lastname.toLowerCase() +"@gmail.com";
         	return emailaddr;
        }
-         
+        
+        
+      //Generate the random password
         public String randomPassword (int length) {
         	
         	String passwordSet ="ABCDEFGHIJKLMNOUPQRSTUVXYZ123456789!§$%67890ß´+";
@@ -86,17 +89,29 @@ public class Email {
         	}
         	return new String (password);
         }
-        
-		//Ask for department
-		
-		//Generate the random password
-		
-		//Generate a random password
-		
-		
 		//set the mailbox capacity
+        
+        public void setMailBoxcapacity (int mailbox_cap) {
+		this.mailboxCapacity = mailbox_cap;
+        }
+        
+     // change the password
+        public void setPassword (String pass) {
+        	this.password = pass;
+        	blank = true;
+        }
+
+		public String getPassword() {
+			return password;
+		}
+		//Get method /show info to display the information about the user entry
 		
-		// change the password
+		public String showInfo() {
+			return "Full Name : " + firstname + " " + lastname +"\n" + 
+			"Email: " + email		;
+			
+			
+		}
 		
 		
 }
