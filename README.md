@@ -1,1 +1,1 @@
-This is a simple example for pattern matches using java.
+Java basic projects Email List application, StudentDatabaseApp.
