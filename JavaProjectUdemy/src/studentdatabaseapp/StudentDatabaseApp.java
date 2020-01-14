@@ -9,21 +9,23 @@ public class StudentDatabaseApp {
 		
 		Student stud1 = new Student();
 		//stud1.enroll();
-		
-		System.out.println("PRESS b or B to show information regarding enrollment");
+	do {
+		System.out.println("PRESS:\n 1. i for general information\n2. b for balance");
 		String button = "";
 		Scanner bt = new Scanner(System.in);
 		button = bt.nextLine();
 		
-		if (button.equals("b") || bt.equals("B")) {
-			stud1.Info();
+		if (button.equals("i") || bt.equals("I")) {
+			stud1.Info();	
+		}else if (button.equals("b") || bt.equals("B")) {
 			
+			stud1.balance();
 		}
 	//
 		
 		// Ask the user how many new students will be added to the database
 		
-         
+	}while(1 !=0); 
 	}
 
 }

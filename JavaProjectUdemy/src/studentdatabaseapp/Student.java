@@ -74,6 +74,11 @@ public class Student {
 	 }
 	
 	// View balance 
+	 
+	 public void balance() {
+		 
+		 System.out.println("Total cost of enrolled courses: "+ (i-1)*costPerCourse + "$");
+	 }
 	
 	// Pay Tution
 	
