@@ -23,7 +23,7 @@ public class StudentDatabaseApp {
 		}
 	//
 		
-		// Ask the user how many new students will be added to the database
+		
 		
 	}while(1 !=0); 
 	}
