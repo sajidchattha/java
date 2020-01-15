@@ -10,7 +10,7 @@ public class StudentDatabaseApp {
 		Student stud1 = new Student();
 		//stud1.enroll();
 	do {
-		System.out.println("PRESS:\n 1. i for general information\n2. b for balance");
+		System.out.println("\n\nPRESS:\ni for full information\nb for balance\np for Pyaments");
 		String button = "";
 		Scanner bt = new Scanner(System.in);
 		button = bt.nextLine();
@@ -20,6 +20,9 @@ public class StudentDatabaseApp {
 		}else if (button.equals("b") || bt.equals("B")) {
 			
 			stud1.balance();
+		}else if (button.equals("p") || bt.equals("P")) {
+			
+			stud1.payment(5000);
 		}
 	//
 		

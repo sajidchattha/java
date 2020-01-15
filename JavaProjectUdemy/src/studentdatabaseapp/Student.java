@@ -81,13 +81,20 @@ public class Student {
 	 }
 	
 	// Pay Tution
+	 
+	 public void payment(int payment) {
+		 
+		 System.out.println("BALANCE:" + (payment - tutionBalance) +"$");
+		 
+	 }
 	
 	//Show status
 	 public void Info() {
-		 System.out.println("*****PERSONAL INFORMATION*****\n" + "\nFull Name: " + firstName + " " + lastName + " " + "\nGraduation Year: " + gradYear + "\nID: " + studentId );
+		 System.out.println("\n\n*****PERSONAL INFORMATION*****\n" + "\nFull Name: " + firstName + " " + lastName + " " + "\nGraduation Year: " + gradYear + "\nID: " + studentId );
 		 System.out.println("\n*****Enrolled Courses***** \n" + "\n" + courses);
 		 System.out.println("Number of enrolled courses: " + (i-1));
-		 System.out.println("Total cost of enrolled courses: "+ (i-1)*costPerCourse + "$");
+		 tutionBalance = (i-1)*costPerCourse;
+		 System.out.println("Total cost of enrolled courses: "+ tutionBalance + "$");
 	 }
 
 }
